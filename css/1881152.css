@@ -1,0 +1,279 @@
+/* Quy định font, màu chữ cho toàn trang*/
+body {
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #7c7c7c;
+}
+/* Đổi font chử cho thẻ a trong menu */
+#menu li {
+	margin-left: 25px;
+	padding: 0;
+}
+#menu li a {
+	font-family: 'Changa One', cursive;
+	color: #333333;
+}
+
+/* hover vào link có màu xanh hoặc là thẻ a nằm trong li có thuộc tính active có màu xanh */
+#menu li a:hover,
+#menu li.active a {
+	color: #2fa0d5;
+	background: none;
+}
+/* form Search */
+#frm-search {
+	display: block;
+	width: 169px;
+	height: 32px;
+	border: 1px solid #d5d5d5d5;
+	padding: 4px 11px 6px; /* Trên, trái phải, dưới*/
+	box-sizing: border-box; /* tính kích thước từ border */
+	border-radius: 10px;
+	margin: 0px 10px; /* top, bottom 0px, trái, phải 10px*/
+}
+/* textbox trong form Search*/
+#search-word {
+	border: none;
+	background: white;
+	box-shadow: 0 0 0; /*Độ bóng của viền*/
+	padding: 0px;
+}
+/* button trong form*/
+#btn-search {
+	border: none;
+	width: 25px;
+	background: url(../images/search_button.png) 0 0 no-repeat; /* 0 0 tương ứng bị trí top*/
+}
+
+#social a {
+	display: inline-block; /*Hiển thị từng block nằm trên cùng một dòng*/
+	margin-left: 5px;
+	font-size: 0;
+	height: 25px;
+	width: 27px;
+	cursor: pointer; /*Di chuột vào sẽ đổi cursor là pointer */
+}
+
+#social a.twitter {
+	background: url(../images/twitter.png) 0 0 no-repeat;
+}
+#social a.twitter:hover {
+	background: url(../images/twitter_active.png) 0 0 no-repeat;
+}
+#social a.facebook {
+	background: url(../images/facebook.png) 0 0 no-repeat;
+}
+#social a.facebook:hover {
+	background: url(../images/facebook_active.png) 0 0 no-repeat;
+}
+
+#banner {
+	background: url(../images/bg_slider.gif) center bottom repeat;
+	color: white;
+}
+#banner h4 {
+	font-size: 60px;
+	line-height: 60px; /*Chiều cao của dòng*/
+	font-family: 'Changa One', cursive;
+	font-weight: 900;
+	letter-spacing: 1px; /*Khoản cách giữa các ký tự*/
+}
+#btn-menu {
+	display: inline-block;
+	font: 30px 'Changa One', cursive;
+	background-color: #fe97c2;
+	line-height: 36px;
+	padding: 14px 62px;
+	border-radius: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin: 30px 0px;
+	color: white;
+}
+#dots {
+	list-style: none; /*không hiển thị dạng danh sách*/
+	padding: 0px;
+	text-align: center;
+	height: 19px;
+	line-height: 19px;
+}
+#dots li {
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	border-radius: 19px;
+	text-align: left;
+	/*muc đích cho hiển thị text ngoài vùng màn hình người dùng không nhìn thấy*/
+	/* text-indent: 99999px; */
+	background: white;
+	margin: 0 2px;
+	position: relative; /*thuộc tính cha, quy định li luôn nằm trong cha nó*/
+}
+
+#dots li span {
+	position: absolute; /* thuộc tính con, quy định luôn nằm trong cha nó*/
+	width: 9px;
+	height: 9px;
+	border-radius: 9px;
+	top: 5px;
+	left: 5px;
+}
+
+/*trường hợp active hoặc người dùng chọn mới xuất hiện chấm tròng xanh*/
+#dots li.current span,
+#dots li:hover span {
+	box-shadow: 0px;
+	background: #73c926;
+}
+
+/* Main */
+h4 {
+	font-family: 'Changa One', cursive;
+	font-weight: 400;
+	font-size: 25px;
+	color: #333333;
+	margin: 10px;
+}
+a.readmore {
+	text-decoration: underline;
+	color: #2fa0d5;
+}
+
+/* About Us */
+.about {
+	background: #fa97c2;
+	color: #814e64;
+}
+h3 {
+	font-family: 'Changa One', cursive;
+	font-weight: 400;
+	font-size: 60px;
+	margin: 10px 0;
+}
+.about div > img {
+	float: left;
+	margin: 20px;
+}
+
+#frm-signup {
+	border: 3px dashed #814e64;
+	padding: 20px 10px;
+	border-radius: 10px;
+	overflow: auto;
+}
+
+#frm-signup h3 {
+	font-size: 30px;
+	line-height: 28px;
+	text-align: center;
+	margin: 0px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+#frm-signup input {
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	height: 38px;
+	padding: 10px;
+	box-shadow: 0 0 0;
+	margin: 6px 0px;
+}
+
+#frm-signup button {
+	float: right;
+	border-radius: 14px;
+	border: none;
+	color: white;
+	background: #333333;
+	font-size: 22px;
+	font-family: 'Changa One', cursive;
+	text-transform: uppercase;
+	line-height: 26px;
+	padding: 10px 34px;
+}
+
+/* New */
+.date {
+	text-align: center;
+	background: #73c926;
+	color: white;
+	font: 30px 'Changa One', cursive;
+	line-height: 30px;
+	border-radius: 14px;
+	padding: 8px 0px;
+	margin: 10px 0px;
+}
+
+/* footer */
+footer {
+	background: url(../images/bg.gif) 0 center repeat;
+	text-align: center;
+	padding: 20px;
+}
+
+footer li {
+	display: inline-block;
+	padding: 0px 90px 15px 0px;
+}
+footer a {
+	color: #7c7c7c;
+	text-decoration: none;
+}
+
+footer nav a,
+footer a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+footer nav a:hover,
+footer nav .active a {
+	color: #fa97c2;
+}
+
+/* About Page */
+#small-banner {
+	background: url(../images/bg_slider.gif) center top repeat;
+	padding: 0.25em; /* 0.25em tương đương 0.25 font mặt định, font mặt định 16px quy định body : 0.25em X 16px = 4px*/
+	content: "";
+}
+
+.round-img {
+	border: none;
+	border-radius: 15px;
+	float: left;
+	margin-right: 15px;
+}
+
+/* Testimonials */
+#testimonials .col {
+	background: url(../images/quot.png) top left no-repeat;
+	padding-left: 50px;
+}
+#testimonials h3 {
+	margin-left: -10px;
+}
+
+/* Blog */
+.blog-list {
+	list-style-type: none;
+	padding-left: 0px;
+}
+.blog-list li {
+	padding-bottom: 10px;
+	padding-left: 24px;
+	background: url(../images/marker1.png) 0 4px no-repeat;
+}
+.blog-list a {
+	color: #7c7c7c;
+	text-decoration: none;
+}
+.blog-list a:hover {
+	color: #73c926;
+}
+.blog {
+	clear: both;
+}

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>1881152 - Ice-cream - About</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/1881152.css">
+    <!-- Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa+One" type="text/css">
+</head>
+
+<body>
+    <!--Header-->
+    <header class="container">
+        <nav class="navbar navbar-expand-sm navbar-light px-0">
+            <!--Bỏ padding ngang 2 bên trái phải (px-0)-->
+            <a class="navbar-brand" id="logo" href="index.html"><img src="images/logo.png" alt="Ice-cream"></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <!--Thêm thuộc tính canh lề phải (justify-content-end) -->
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                    <!--Bỏ canh lề trái (mr-auto)-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" id="frm-search">
+                    <div class="input-group input-group-sm">
+                        <input class="form-control" type="text" placeholder="Search" id="search-word">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit" id="btn-search"></button>
+                        </div>
+                    </div>
+                </form>
+                <div id="social">
+                    <a href="#" class="btn twitter"></a>
+                    <a href="#" class="btn facebook"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/Header-->
+    <!--Banner-->
+    <div class="container-fluid" id="small-banner">
+    </div>
+    <!--/Banner-->
+
+    <!-- For Details -->
+    <div id="content">
+        <!--About-->
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-8" id="aboutus">
+
+                </div>
+                <div class="col-md-4" id="visions">
+
+                </div>
+            </div>
+        </div>
+        <!--/About-->
+
+        <!--Testimonials-->
+        <div class="container-pluid about py-5">
+            <div class="container" id="testimonials">
+
+            </div>
+        </div>
+        <!--/Testimonials-->
+        <!--Our Team-->
+        <div class="container py-5" id="team">
+            
+        </div>
+        <!--/Our Team-->
+    </div>
+    <!-- /For Details -->
+    <!--Footer-->
+    <footer class="container-fluid">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+        <div>
+            Ice-cream &copy; 2019 | <a class="text-uppercase" href="#">Privacy policy</a>
+        </div>
+    </footer>
+    <!--/Footer-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars.min-v4.7.6.js"></script>
+
+
+    <!-- Template -->
+    <!-- About Us -->
+    <script id="aboutus-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <h3 class="text-dark">About Us</h3>
+        <img class="round-img" src="{{thumbpath}}" alt="">
+        {{{summary}}}
+        <p><a href="#" class="readmore" onclick="loadData('aboutus/{{id}}', '#content', '#details-template');">ReadMore</a></p>
+        {{/each}}
+    </script>
+    <!-- /About Us -->
+
+    <!-- Vision -->
+    <script id="visions-template" type="text/x-handlebars-template">
+        <h3 class="text-dark">Our Vision</h3>
+        {{#each data}}
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="#" onclick="loadData('visions/{{id}}', '#content', '#details-template');">
+                <img class="round-img" src="{{thumbpath}}" alt=""></a>
+            </div>
+            <div class="col-sm-8">
+                <a href="#" onclick="loadData('visions/{{id}}', '#content', '#details-template');">
+                <h4 class="py-0 my-0">{{name}}</h4></a>
+                <p>{{{summary}}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!-- /Vision -->
+
+
+    <!-- Testimonials -->
+    <script id="testimonials-template" type="text/x-handlebars-template">
+        <h3 class="text-white">Testimonials</h3>
+                <div class="row">
+                    {{#each data}}
+                    <div class="col">
+                        <p>{{summary}}</p>
+                        <div class="text-white">{{name}}</div>
+                        <a href="mailto:{{email}}">{{email}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+    </script>
+    <!-- /Testimonials -->
+
+    <!-- Team -->
+    <script id="team-template" type="text/x-handlebars-template">
+        <h3 class="text-dark">Our Team</h3>
+            <div class="row">
+                {{#each data}}
+                <div class="col-md-3">
+                    <a href="#" onclick="loadData('team/{{id}}','#content','#details-template');">
+                    <img src="{{thumbpath}}" alt="" class="rounded"></a>
+                    <p class="text-dark font-weight-bold pt-3">{{name}}</p>
+                    <p>{{summary}}</p>
+                </div>
+                {{/each}}
+            </div>
+    </script>
+    <!-- /Team -->
+
+    <!-- details -->
+    <script id="details-template" type="text/x-handlebars-template">
+        {{#each data}}
+            <div class="container py-5">
+            <h3 class="text-dark">{{name}}</h3>
+                <div>
+                    <img class="round-img pull-left" src="{{imagepath}}" alt="">
+                    {{{description}}}
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <!-- /details -->
+
+
+    <!-- Link function external -->
+    <script src="js/1881152.js"></script>
+    <!-- Script Main -->
+    <script>
+        /* Hàm hoạt động khi web đã load(html) hoàn thành */
+        $(document).ready(function () {
+            loadData('aboutus', '#aboutus', '#aboutus-template');
+            loadData('visions', '#visions', '#visions-template');
+            loadData('testimonials', '#testimonials', '#testimonials-template');
+            loadData('team', '#team', '#team-template');
+        });
+    </script>
+</body>
+
+</html>
